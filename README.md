@@ -1,2 +1,2 @@
-��#� �Y�l�a�b
+#Ylab
 HOMEWORK!!!
