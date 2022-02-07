@@ -64,3 +64,9 @@ def check_win(mas, sign):
                     return sign
             else:
                 count = 0
+    for i in range(len): #ничья
+        for j in range(len):
+            if mas[i][j] !=0:
+                count += 1
+        if count == 99:
+            return 'Ничья'

@@ -4,7 +4,7 @@ import pygame
 import sys
 
 from check_win import check_win
-from computer_move import computer_win
+from computer_move import battle, computer_win
 from computer_vs import comp_vs
 
 
@@ -45,7 +45,7 @@ while True:
                 for col in range(10):
                     if mas[row][col] == 0:
                         if queue % 2 ==1:
-                            computer_win(mas,'o',2)
+                            computer_win(mas,'o')
                             queue += 1
                     elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
                         game_over = False
