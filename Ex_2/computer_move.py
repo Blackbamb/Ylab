@@ -4,12 +4,13 @@ kol = 4
 
 
 def battle(mas, sign):
+    global count
     for lvl in range(3, 0, -1):
         for i in range(len):  # закрывает по горизонтали справа
             for j in range(len):
                 if mas[i][j] == 'x':
                     count += 1
-                    if count >= lvl and (j + 1) < len and mas[i][j + 1] == 0:
+                    if count >= lvl and (j + 1) >=0 and mas[i][j + 1] == 0:
                         mas[i][j + 1] = sign
                         return mas[i][j + 1]
                 else:
@@ -154,11 +155,12 @@ def battle(mas, sign):
 
 
 def computer_win(mas, sign, signx):
+    global count
     for i in range(len):
         for j in range(len):
             if mas[i][j] == signx:
                 count += 1
-                if count == kol and (j + 1) < len and mas[i][j + 1] == 0:
+                if count == kol and (j + 1) >=0 and mas[i][j + 1] == 0:
                     mas[i][j + 1] = 'o'
                     return mas[i][j + 1]
             else:
