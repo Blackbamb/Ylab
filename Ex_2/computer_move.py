@@ -10,7 +10,7 @@ def battle(mas, sign):
             for j in range(len):
                 if mas[i][j] == 'x':
                     count += 1
-                    if count >= lvl and (j + 1) >=0 and mas[i][j + 1] == 0:
+                    if count >= lvl and (j + 1) <len and mas[i][j + 1] == 0:
                         mas[i][j + 1] = sign
                         return mas[i][j + 1]
                 else:
