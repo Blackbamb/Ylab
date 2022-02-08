@@ -2,7 +2,7 @@ import pygame
 import sys
 
 from check_win import check_win
-from computer_move import battle, computer_win
+from computer_move import computer_win
 
 pygame.init()
 size_block = 50
