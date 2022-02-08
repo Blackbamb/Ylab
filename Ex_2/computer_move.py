@@ -180,7 +180,7 @@ def computer_win(mas, sign, signx):
                 count += 1
                 if count == kol and (j + 1) < len and mas[j + 1][i] == 0:
                     mas[j + 1][i] = 'o'
-                    return mas[j][i + 1]
+                    return mas[j + 1][i]
             else:
                 count = 0
 
