@@ -313,9 +313,10 @@ class Prm(Kub):
 
     def third(self):
         super().third()
-        self.y.destroy()
-        self.ent_y.destroy()
-        self.fig1.destroy()
+        if self.sq['text'] != "Круг" and self.sq['text'] != "Квадрат":
+            self.y.destroy()
+            self.ent_y.destroy()
+            self.fig1.destroy()
 
     @staticmethod
     def pl_prym(a, b):
@@ -359,9 +360,10 @@ class Piramida(Romb):
 
     def four(self):
         super().four()
-        self.y.destroy()
-        self.ent_y.destroy()
-        self.fig1.destroy()
+        if self.sq['text'] != "Сфера" and self.sq['text'] != "Куб":
+            self.y.destroy()
+            self.ent_y.destroy()
+            self.fig1.destroy()
 
 
 class Cilindr(Piramida):
@@ -425,9 +427,10 @@ class Treug(Konus):
 
     def third(self):
         super().third()
-        self.z.destroy()
-        self.ent_z.destroy()
-        self.fig2.destroy()
+        if self.sq['text'] != "Круг" and self.sq['text'] != "Квадрат" and self.sq['text'] != "Прямоугольник" and self.sq['text'] != "Ромб":
+            self.z.destroy()
+            self.ent_z.destroy()
+            self.fig2.destroy()
 
     @staticmethod
     def area(a, b, c, p):
@@ -475,9 +478,11 @@ class Parall(Trap):
 
     def four(self):
         super().four()
-        self.z.destroy()
-        self.ent_z.destroy()
-        self.fig2.destroy()
+        if self.sq['text'] != "Сфера" and self.sq['text'] != "Куб" and self.sq['text'] != "Пирамида" \
+                and self.sq['text'] != "Цилиндр" and self.sq['text'] != "Конус":
+            self.z.destroy()
+            self.ent_z.destroy()
+            self.fig2.destroy()
 
 
 class Medianapiramida(Parall):
@@ -501,3 +506,5 @@ class Medianapiramida(Parall):
         super().four()
         if self.sq['text'] == "Пирамида":
             self.en.destroy()
+            self.z.destroy()
+            self.fig2.destroy()
